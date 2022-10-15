@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWS Cyber Week</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Cyber Week</a>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="events.html">Events</a>
+            </li>
+            <li>
+                <a href="regis.html">Registration</a>
+            </li>
+            <li>
+        </ul>
+    </header>
+    <section class="banner">
+        <div class="banner-text"><p class="txt">Welcome to the<br><span class="main">Cyber Express!</span><br><span class="dynamic-txt"></span></p></div>
+    </section>
+    
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12">
+    </script>
+    <script>
+        var typed = new Typed(".dynamic-txt", {
+        strings: ["Hosted by Pacific World School", "Finding the next IT Wizard",],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true
+    })
+    </script>
+    <section class="mid">
+        <H1 class="events">Cyber Express Events</H1>
+        <p class="events-info">
+            These below are the Tiers according to classes which you can participate in!
+        </p>
+        <a href="events.html#tier1">
+        <button class="btn btn1">Tier 1 <br>Grade VII - VIII</button> 
+    </a>
+    <a href="events.html#tier2">
+        <button class="btn btn2">Tier 2 <br>Grade IX</b></button>
+    </a>
+    <a href="events.html#tier3">
+        <button class="btn btn3">Tier 3 <br>Grade XI</button>
+    </a>
+    <a href="events.html#tier4">
+        <button class="btn btn4">Tier 4 <br>Open</button>
+    </a>
+    <footer>
+        <div class="footer-content">
+            <h3>
+                Contact us for any doubt of yours!
+            </h3>
+            <p>
+                Have a doubt? No worries! You can contact us right here and we'll solve your doubt right away!
+            </p>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2022 Pacific World School. Designed with 💖 and Lots of ☕ by <span>Yajur and Ayush</span></p>
+        </div>
+    </footer>
+</body>
+</html>

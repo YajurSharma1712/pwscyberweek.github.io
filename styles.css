@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 100000;
+}
+header.sticky
+{
+    padding: 5px 100px;
+    background: #fff;
+
+}
+header .logo
+{
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+header ul
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li
+{
+    position: relative;
+    list-style: none;
+
+}
+header ul li a
+{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+header.sticky .logo,
+header.sticky ul li a
+{
+    color:#000;
+}
+header ul li a::after
+{
+    content: "";
+    position: absolute;
+    background-color: tomato;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -3px;
+    transition: 0.3s;
+
+}
+header ul li a:hover:after
+{
+    width: 100%;
+}
+header.sticky ul li a::after
+{
+    content: "";
+    position: absolute;
+    background-color: tomato;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+.toggle-button
+{
+    position: absolute;
+    top: 2.5rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.toggle-button .bar
+{
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+}
+@media(max-width: 600px){
+    .toggle-button{
+        display: none;
+    }
+    header ul li a {
+        /* display: none; */
+        width: 100%;
+    }
+    header{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header ul{
+        width: 100%;
+        flex-direction: column;
+    }
+    header ul li{
+        text-align: center;
+    }
+    header ul li a.active{
+        display: flex;
+    }
+    header ul li{
+        padding: 0.25rem 1rem;
+    }
+}
+.banner .txt
+{
+    text-align: center;
+    padding: 400px 0;
+    font-size: 2.5em;
+    color: #fff;
+}
+.banner .txt{
+    color: #000;
+}
+.banner
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(img.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.banner .txt .main{
+    font-size: 4rem;
+    font-weight: 500;
+}
+.events{
+    text-align: center;
+    padding-top: 30px;
+    font-size: 2rem;
+}
+.events-info{
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 10px;
+}
+.btn{
+    border: 1px solid cadetblue;
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+.btn1{
+    color: cadetblue;
+}
+.btn1:hover{
+    color: #fff;
+    transform: translateY(-10px);
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: cadetblue;
+    z-index: -1;
+    transition: 0.5s;
+}
+.btn1::before{
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+.btn1:hover::before{
+    height: 180%;
+}
+.btn2::before{
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+.btn2:hover::before{
+    height: 180%;
+}
+.btn2{
+    color: cadetblue;
+}
+.btn2:hover{
+    color: #fff;
+    transform: translateY(-10px);
+}
+.btn3::before{
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+.btn3:hover::before{
+    height: 180%;
+}
+.btn3{
+    color:cadetblue;
+}
+.btn3:hover{
+    color: #fff;
+    transform: translateY(-10px);
+}
+.btn4::before{
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+.btn4:hover::before{
+    height: 180%;
+}
+.btn4{
+    color: cadetblue;
+}
+.btn4:hover{
+    color: #fff;
+    transform: translateY(-10px);
+}
+.img{
+    width: 100px;
+}
+.info{
+    padding-left: 10px;
+}
+.btn{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 30px;
+    font-size: 1.5rem;
+}
+.mid{
+    background-color: #d3d3d3d3
+}
+.dynamic-txt{
+    font-size: 2rem;
+}
+footer{
+    position: relative;
+    top: 50px;
+    background: #111;
+    height: auto;
+    width: 100vw;
+    padding-top: 40px;
+    color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;;
+}
+.socials li{
+    margin: 0 10px ;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+
+}
+.socials a:hover i{ 
+    color: aqua;
+}
+.footer-bottom{
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+}
+.footer-bottom span{
+    opacity: .4;
+    font-weight: 200;
+}
+.tier1-title{
+    text-align: center;
+    padding-top: 30px;
+    font-size: 2rem;
+}
+.tier1-event-details{
+    font-size: 1.25rem;
+    margin-top: 30px;
+    margin-left: 20px;
+    font-weight: 1000;
+}
+.tier2-title{
+    text-align: center;
+    padding-top: 30px;
+    font-size: 2rem;
+}
+.tier2-event-details{
+    font-size: 1.25rem;
+    margin-top: 30px;
+    margin-left: 20px;
+    font-weight: 1000;
+}
+.tier3-title{
+    text-align: center;
+    padding-top: 30px;
+    font-size: 2rem;
+}
+.tier3-event-details{
+    font-size: 1.25rem;
+    margin-top: 30px;
+    margin-left: 20px;
+    font-weight: 1000;
+}
+.tier4-title{
+    text-align: center;
+    padding-top: 30px;
+    font-size: 2rem;
+}
+.tier4-event-details{
+    font-size: 1.25rem;
+    margin-top: 30px;
+    margin-left: 20px;
+    font-weight: 1000;
+}
+.regis-info{
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 10px;
+}
+.regis-btn::before{
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+.regis-btn:hover::before{
+    height: 180%;
+}
+.regis-btn{
+    color: cadetblue;
+}
+.regis-btn:hover{
+    color: #fff;
+    transform: translateY(-10px);
+}
+.regis-btn{
+    font-size: 1.5rem;
+}
+.container{
+    text-align: center;
+}
